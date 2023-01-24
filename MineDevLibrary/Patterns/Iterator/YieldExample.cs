@@ -86,6 +86,7 @@ namespace MineDevLibrary
             }
             Console.WriteLine("After for");
 
+            //можно объявлять сколько угодно много yield return и все они будут последовательно выполняться
             yield return -1;
 
             Console.WriteLine("End Start of CreateEnumerable()");
