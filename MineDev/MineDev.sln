@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineDev", "MineDev.csproj", "{5F5D581E-D2F4-4C5B-B472-B286F294823E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineDevLibrary", "..\MineDevLibrary\MineDevLibrary.csproj", "{91AC514F-07E8-4D45-AA60-BA508CC52C0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5F5D581E-D2F4-4C5B-B472-B286F294823E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5D581E-D2F4-4C5B-B472-B286F294823E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5D581E-D2F4-4C5B-B472-B286F294823E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AC514F-07E8-4D45-AA60-BA508CC52C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AC514F-07E8-4D45-AA60-BA508CC52C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AC514F-07E8-4D45-AA60-BA508CC52C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AC514F-07E8-4D45-AA60-BA508CC52C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
