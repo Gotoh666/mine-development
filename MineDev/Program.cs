@@ -2,9 +2,10 @@
 using System;
 Console.WriteLine("Start");
 
-B a = (B)(new A());
+Delegates.Use();
 
-Delegates.SimpleDelegateUse();
+
+//Delegates.SimpleDelegateUse();
 
 Console.WriteLine("The end");
 Console.ReadLine();
