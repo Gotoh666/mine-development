@@ -69,11 +69,6 @@ namespace MineDevLibrary.Patterns.TemplateMethod
             {
                 throw new NotImplementedException();
             }
-
-            public override List<object> ModifySlotsForView(List<object> slots)
-            {
-                throw new NotImplementedException();
-            }
         }
 
         /// <summary>
@@ -83,11 +78,6 @@ namespace MineDevLibrary.Patterns.TemplateMethod
         public class VaacinationSlots : SlotsBase
         {
             public override List<object> GetSlots(object patient)
-            {
-                throw new NotImplementedException();
-            }
-
-            public override List<object> ModifySlotsForView(List<object> slots)
             {
                 throw new NotImplementedException();
             }

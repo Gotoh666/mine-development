@@ -1,11 +1,13 @@
 ﻿using MineDevLibrary;
+using MineDevLibrary.Algorithms;
 using System;
 Console.WriteLine("Start");
 
-Delegates.Use();
-
-
-//Delegates.SimpleDelegateUse();
+var tree = new BinaryTree();
+foreach (var item in tree.ToList())
+{
+    Console.WriteLine(item);
+}
 
 Console.WriteLine("The end");
 Console.ReadLine();
