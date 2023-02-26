@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace MineDevLibrary.Algorithms
 {
+    /// <summary>
+    /// простое бинарное дерево
+    /// 
+    /// </summary>
     public class BinaryTree
     {
-        private Node _Tree { get; set; }    
+        //корень дерева
+        private Node _Root { get; set; }    
 
-        public class Node 
+        //узел
+        private class Node 
         {
             public int Value { get; set; }
             public Node? Left { get; set; }
@@ -24,18 +30,33 @@ namespace MineDevLibrary.Algorithms
             }
         }
 
+        //создаем дерево 
         public BinaryTree()
         {
-            _Tree = new Node(1,new Node(2, new Node(3), new Node(4)), new Node(5, new Node(6)));
+            _Root = new Node(1,
+                        new Node(2, 
+                            new Node(3), 
+                            new Node(4)),
+                        new Node(5, 
+                            new Node(6)));
         }
 
         //превращаем дерево в лист рекурсивно
         public List<int> ToList()
         {
             var list = new List<int>();
-            SearchRecursive(_Tree, ref list);
+            SearchRecursive(_Root, ref list);
             return list;
         }
+
+        //возвращает перечислитель
+        public IEnumerable<int> ToEnumerable()
+        {
+            return ToEnumerableNoRecurseve(_Root);
+        }
+
+
+
 
         //рекурсивный обход
         private void SearchRecursive(Node node, ref List<int> listResult)
@@ -49,8 +70,44 @@ namespace MineDevLibrary.Algorithms
         }
 
 
-        
 
+        //создаем перечислитель для дерева
+        private IEnumerable<int> ToEnumerableImpl(Node node) 
+        {
+            if(node == null ) yield break;
+
+            yield return node.Value;
+
+            foreach(var n in ToEnumerableImpl(node.Left))
+            {
+                yield return n;
+            }
+
+            foreach (var n in ToEnumerableImpl(node.Right))
+            {
+                yield return n;
+            }
+        }
+
+
+        //не рекурсивный проход по дереву и возврат перечислителя
+        private IEnumerable<int> ToEnumerableNoRecurseve(Node node)
+        {
+            var state = new Stack<Node>();
+            
+            state.Push(node);
+
+            while(state.Count>0)
+            {
+                var current = state.Pop();
+                if (current == null) continue;
+
+                yield return current.Value;
+
+                state.Push(current.Left);
+                state.Push(current.Right);
+            }
+        }
 
     }
 }

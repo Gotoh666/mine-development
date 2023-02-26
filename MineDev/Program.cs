@@ -3,8 +3,11 @@ using MineDevLibrary.Algorithms;
 using System;
 Console.WriteLine("Start");
 
+YieldExample.UseForeach();
+
+
 var tree = new BinaryTree();
-foreach (var item in tree.ToList())
+foreach (var item in tree.ToEnumerable())
 {
     Console.WriteLine(item);
 }

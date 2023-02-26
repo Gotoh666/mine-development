@@ -16,7 +16,7 @@ namespace MineDevLibrary
     /// UseCreateEnumerable() - итерирует "ручным образом" явно вызывая методы итератора, визуализирует поток выполнения
     /// UseWithCheck() - итерирует с проверкой аргумента "ручным образом" явно вызывая методы итератора, визуализирует поток выполнения
     /// </summary>
-    internal class YieldExample
+    public class YieldExample
     {
         public static void UseForeach()
         {
